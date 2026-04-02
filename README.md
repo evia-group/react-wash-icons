@@ -4,9 +4,13 @@ A tree-shakeable React icon library with 84 laundry and textile care symbols as 
 
 ## Installation
 
+Install from a [GitHub release](https://github.com/evia-group/react-wash-icons/releases):
+
 ```bash
-npm install react-wash-icons
+npm install https://github.com/evia-group/react-wash-icons/releases/download/vX.Y.Z/react-wash-icons-X.Y.Z.tgz
 ```
+
+Replace `X.Y.Z` with the desired version (e.g., `v1.0.0` / `react-wash-icons-1.0.0.tgz`).
 
 ## Usage
 
@@ -102,6 +106,16 @@ npm run format     # format with Prettier
 The `src/icons/` directory and `src/iconMap.ts` are generated files and not checked into git. They are created automatically from the SVG files in `svg/`.
 
 To add a new icon, drop an SVG file into `svg/` and run `npm run build`. The icon will be automatically available as a React component and in the `getIcon()` lookup.
+
+## Releasing
+
+```bash
+npm run release:patch   # bug fixes, new icons (1.0.0 → 1.0.1)
+npm run release:minor   # new features (1.0.0 → 1.1.0)
+npm run release:major   # breaking changes (1.0.0 → 2.0.0)
+```
+
+This bumps the version, commits, tags, and pushes. A GitHub Action then automatically builds and creates a release with the installable tarball.
 
 ## License
 
