@@ -38,6 +38,9 @@
     "generate": "tsx scripts/generate-icons.ts",
     "build": "npm run generate && vite build && tsc --project tsconfig.build.json --emitDeclarationOnly",
     "format": "prettier --write \"src/**/*.{ts,tsx}\" \"scripts/**/*.ts\"",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release:patch": "npm version patch && git push origin master --tags",
+    "release:minor": "npm version minor && git push origin master --tags",
+    "release:major": "npm version major && git push origin master --tags"
   }
 }
