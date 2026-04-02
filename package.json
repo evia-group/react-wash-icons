@@ -25,8 +25,10 @@
     "react": ">=16.8.0"
   },
   "devDependencies": {
+    "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "fast-xml-parser": "^5.5.9",
+    "prettier": "^3.8.1",
     "react": "^19.2.4",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2",
@@ -35,6 +37,7 @@
   "scripts": {
     "generate": "tsx scripts/generate-icons.ts",
     "build": "npm run generate && vite build && tsc --project tsconfig.build.json --emitDeclarationOnly",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"scripts/**/*.ts\"",
     "prepublishOnly": "npm run build"
   }
 }

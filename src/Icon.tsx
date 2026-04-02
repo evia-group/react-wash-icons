@@ -3,12 +3,22 @@ import type { IconNode, WashIconProps } from './types';
 
 function renderNodes(nodes: IconNode[]): React.ReactNode[] {
   return nodes.map(([tag, attrs, children], i) =>
-    createElement(tag, { key: i, ...attrs }, children ? renderNodes(children) : undefined),
+    createElement(
+      tag,
+      { key: i, ...attrs },
+      children ? renderNodes(children) : undefined,
+    ),
   );
 }
 
-export const Icon = forwardRef<SVGSVGElement, WashIconProps & { nodes: IconNode[] }>(
-  ({ size = 24, color = 'currentColor', nodes, children, className, ...rest }, ref) => {
+export const Icon = forwardRef<
+  SVGSVGElement,
+  WashIconProps & { nodes: IconNode[] }
+>(
+  (
+    { size = 24, color = 'currentColor', nodes, children, className, ...rest },
+    ref,
+  ) => {
     return createElement(
       'svg',
       {

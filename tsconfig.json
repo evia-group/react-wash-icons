@@ -7,7 +7,8 @@
     "strict": true,
     "esModuleInterop": true,
     "outDir": "./dist",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["react", "node"]
   },
-  "include": ["src"]
+  "include": ["src", "scripts"]
 }
