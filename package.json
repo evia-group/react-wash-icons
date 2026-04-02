@@ -1,6 +1,6 @@
 {
   "name": "react-wash-icons",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "sideEffects": false,
   "main": "./dist/react-wash-icons.cjs",
