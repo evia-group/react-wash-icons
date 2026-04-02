@@ -8,6 +8,7 @@ const SVG_SOURCE = path.resolve(__dirname, '../svg');
 const ICONS_DIR = path.resolve(__dirname, '../src/icons');
 const ICON_MAP_PATH = path.resolve(__dirname, '../src/iconMap.ts');
 
+// Attributes to always strip (Adobe Illustrator metadata)
 const STRIP_ATTRS = new Set([
   'enable-background',
   'xml:space',
@@ -15,11 +16,10 @@ const STRIP_ATTRS = new Set([
   'xmlns:xlink',
   'version',
   'id',
-  'x',
-  'y',
-  'width',
-  'height',
 ]);
+
+// Attributes to strip only from the root <svg> element
+const SVG_ROOT_ATTRS = new Set(['x', 'y', 'width', 'height']);
 
 interface ParsedNode {
   ':@'?: Record<string, string>;
@@ -38,12 +38,13 @@ function toPascalCase(kebab: string): string {
 
 function cleanAttributes(
   attrs: Record<string, string>,
+  stripRootAttrs = false,
 ): Record<string, string> {
   const cleaned: Record<string, string> = {};
   for (const [key, value] of Object.entries(attrs)) {
-    if (!STRIP_ATTRS.has(key)) {
-      cleaned[key] = value.replace(/\s+/g, ' ').trim();
-    }
+    if (STRIP_ATTRS.has(key)) continue;
+    if (stripRootAttrs && SVG_ROOT_ATTRS.has(key)) continue;
+    cleaned[key] = value.replace(/\s+/g, ' ').trim();
   }
   return cleaned;
 }
