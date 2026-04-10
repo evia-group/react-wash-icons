@@ -19,13 +19,13 @@ Replace `X.Y.Z` with the desired version (e.g., `v1.0.0` / `react-wash-icons-1.0
 Import icons directly by name. Unused icons are tree-shaken by your bundler.
 
 ```tsx
-import { Washing30deg, IronLow, BleachingNotAllowed } from 'react-wash-icons';
+import { Washing30deg, IroningLow, BleachingNotAllowed } from 'react-wash-icons';
 
 function CareLabel() {
   return (
     <div>
       <Washing30deg size={32} color="black" />
-      <IronLow size={32} />
+      <IroningLow size={32} />
       <BleachingNotAllowed size={32} className="text-red-500" />
     </div>
   );
@@ -51,7 +51,7 @@ function CareLabels({ iconNames }: { iconNames: string[] }) {
 }
 
 // Usage
-<CareLabels iconNames={['washing-30deg', 'iron-low', 'bleaching']} />
+<CareLabels iconNames={['washing-30deg', 'ironing-low', 'bleaching']} />
 ```
 
 ## Props
@@ -70,15 +70,15 @@ All components forward refs to the underlying `<svg>` element.
 
 ### Washing
 
-`washing` · `washing-30deg` · `washing-30deg-alt` · `washing-30deg-extra-care` · `washing-30deg-extra-care-alt` · `washing-30deg-permanent-press` · `washing-30deg-permanent-press-alt` · `washing-40deg` · `washing-40deg-alt` · `washing-40deg-extra-care` · `washing-40deg-extra-care-alt` · `washing-40deg-permanent-press` · `washing-40deg-permanent-press-alt` · `washing-50deg` · `washing-50deg-alt` · `washing-50deg-permanent-press` · `washing-50deg-permanent-press-alt` · `washing-60deg` · `washing-60deg-alt` · `washing-60deg-permanent-press` · `washing-60deg-permanent-press-alt` · `washing-70deg` · `washing-70deg-alt` · `washing-90deg` · `washing-95deg-alt` · `washing-95deg-permanent-press` · `washing-95deg-permanent-press-alt` · `washing-hand` · `washing-hand-30deg` · `washing-hand-40deg` · `washing-not-allowed`
+`washing` · `washing-30deg` · `washing-30deg-alt` · `washing-30deg-extra-care` · `washing-30deg-extra-care-alt` · `washing-30deg-perm-press` · `washing-30deg-perm-press-alt` · `washing-40deg` · `washing-40deg-alt` · `washing-40deg-extra-care` · `washing-40deg-extra-care-alt` · `washing-40deg-perm-press` · `washing-40deg-perm-press-alt` · `washing-50deg` · `washing-50deg-alt` · `washing-50deg-perm-press` · `washing-50deg-perm-press-alt` · `washing-60deg` · `washing-60deg-alt` · `washing-60deg-perm-press` · `washing-60deg-perm-press-alt` · `washing-70deg` · `washing-70deg-alt` · `washing-90deg` · `washing-95deg-alt` · `washing-95deg-perm-press` · `washing-95deg-perm-press-alt` · `washing-hand` · `washing-hand-30deg` · `washing-hand-40deg` · `washing-not-allowed`
 
 ### Drying
 
-`drying` · `drying-drip-dry` · `drying-drip-dry-shade` · `drying-dry-shade` · `drying-flat-dry` · `drying-flat-dry-shade` · `drying-line-dry` · `drying-line-dry-shade` · `drying-not-allowed` · `drying-tumble` · `drying-tumble-high-heat` · `drying-tumble-low-heat` · `drying-tumble-low-heat-extra-care` · `drying-tumble-low-heat-permanent-press` · `drying-tumble-medium-heat` · `drying-tumble-medium-heat-permanent-press` · `drying-tumble-no-heat` · `drying-tumble-not-allowed`
+`drying` · `drying-drip-dry` · `drying-drip-dry-shade` · `drying-dry-shade` · `drying-flat-dry` · `drying-flat-dry-shade` · `drying-line-dry` · `drying-line-dry-shade` · `drying-not-allowed` · `drying-tumble` · `drying-tumble-high-heat` · `drying-tumble-low-heat` · `drying-tumble-low-heat-extra-care` · `drying-tumble-low-heat-perm-press` · `drying-tumble-medium-heat` · `drying-tumble-medium-heat-perm-press` · `drying-tumble-no-heat` · `drying-tumble-not-allowed`
 
 ### Ironing
 
-`iron` · `iron-high` · `iron-low` · `iron-medium` · `iron-not-allowed` · `iron-steam-not-allowed`
+`ironing` · `ironing-high` · `ironing-low` · `ironing-medium` · `ironing-not-allowed` · `ironing-steam-not-allowed`
 
 ### Bleaching
 
